@@ -1,0 +1,14 @@
+Partindo do pressuposto de que os jogos digitais apresentam efeito motivador e possuem alta capacidade de entreter e divertir as pessoas, ao mesmo tempo em que incentivam e facilitam o aprendizado por meio de ambientes interativos e dinâmicos, conforme atesta Savi (2008), este projeto justifica-se pela importância de construir ferramentas educativas que atendam às demandas de estudantes com Transtorno de Déficit de Atenção e Hiperatividade. Desse modo, apresentamos um jogo digital, criado também por alunos (sob supervisão dos docentes), que provocam o interesse através de desafios, aguçando a curiosidade, fator importante para o desenvolvimento das habilidades cognitivas do estudante e ajustam o seu foco nas atividades escolares. Por fim, buscamos ainda trazer informações acerca do transtorno, a fim de esclarecer e combater estigmas que recaem sobre esses alunos.
+
+
+Proporcionar êxito no processo ensino-aprendizagem de alunos do Ensino Médio com TDAH através do jogo digital;
+Conhecer o TDAH e suas implicações para a aprendizagem;
+Propor uma estratégia lúdica para a superação das dificuldades enfrentadas pelos estudantes com TDAH;
+Apresentar o jogo digital como alternativa na mediação entre aluno e professor no processo de aquisição e assimilação de conteúdos didáticos;
+
+Criação de um aplicativo para celular que apresente, de maneira interativa e lúdica, os conteúdos trabalhados em algumas disciplinas do 1º ano do Ensino Médio, sob supervisão da professora orientadora;
+Seleção e leitura crítica de materiais científicos relacionados à temática analisada, através de pesquisa em biblioteca física e na Internet;
+Entrevista com membros da comunidade escolar (alunos, psicopedagoga e professores);
+Observação comportamental de alunos portadores do TDAH em sala de aula, com e sem o uso da ferramenta digital.
+
+Concluímos que os alunos diagnosticados com o TDAH necessitam receber um olhar diferenciado por parte da comunidade escolar, para que assim possam desenvolver de maneira adequada suas habilidades cognitivas. A ferramenta digital criada para atender esses estudantes mostrou-se efetiva no combate a sintomas como a desatenção e inquietude através do foco por ela proporcionada. Este trabalho deve ser considerado também um subsídio para esclarecimentos acerca do TDAH no contexto educacional, para que todos possam reconhecer as dificuldades enfrentadas pelos estudantes e incentivar a sua superação.
