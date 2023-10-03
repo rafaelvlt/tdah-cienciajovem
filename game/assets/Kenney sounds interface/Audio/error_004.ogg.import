@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://f2mlg1vwydng"
+path="res://.godot/imported/error_004.ogg-c6509d1e80e957a837c21fdd99f358c5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Kenney sounds interface/Audio/error_004.ogg"
+dest_files=["res://.godot/imported/error_004.ogg-c6509d1e80e957a837c21fdd99f358c5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://de4bewx6es7sm"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_67bn1"]
+[ext_resource type="Script" path="res://Jogar.gd" id="2_3u7uu"]
+[ext_resource type="Texture2D" uid="uid://djmib6kg5d43" path="res://assets/saladeaula.jpg" id="2_k4tk7"]
+
+[sub_resource type="Theme" id="Theme_kdje8"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(527, 273)
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_67bn1")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -32.0
+offset_right = 51.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/MarginContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Jogar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_kdje8")
+text = "Jogar"
+script = ExtResource("2_3u7uu")
+
+[node name="Opções" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Opções"
+
+[node name="Sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sair"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Menu"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Menu/ParallaxBackground"]
+z_index = -1
+
+[node name="Saladeaula" type="Sprite2D" parent="Menu/ParallaxBackground/ParallaxLayer"]
+position = Vector2(578, 323.5)
+scale = Vector2(1.02404, 0.909986)
+texture = ExtResource("2_k4tk7")
+
+[connection signal="mouse_entered" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opções" to="Menu" method="_on_opções_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Sair" to="Menu" method="_on_sair_pressed"]

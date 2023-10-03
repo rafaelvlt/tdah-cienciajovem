@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bivulay8xrv2e"
+path="res://.godot/imported/question_002.ogg-b9a3d2dac0234e82c24dba7f56f9815d.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Kenney sounds interface/Audio/question_002.ogg"
+dest_files=["res://.godot/imported/question_002.ogg-b9a3d2dac0234e82c24dba7f56f9815d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
