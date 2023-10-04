@@ -14,13 +14,17 @@ script = ExtResource("1_w2v4a")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.453559
-anchor_right = 0.546441
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -43.0
+offset_right = 100.0
+offset_bottom = 43.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(200, 0)
@@ -28,17 +32,19 @@ layout_mode = 2
 alignment = 1
 
 [node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="dados" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 text = "Salvar dados"
-flat = true
 
 [node name="Voltar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Voltar"
-flat = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 

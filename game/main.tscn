@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://de4bewx6es7sm"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_67bn1"]
-[ext_resource type="Script" path="res://Jogar.gd" id="2_3u7uu"]
+[ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="2_7cyau"]
 [ext_resource type="Texture2D" uid="uid://djmib6kg5d43" path="res://assets/saladeaula.jpg" id="2_k4tk7"]
 
 [sub_resource type="Theme" id="Theme_kdje8"]
@@ -20,14 +20,15 @@ script = ExtResource("1_67bn1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1
-anchors_preset = 13
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -48.0
-offset_top = -32.0
-offset_right = 51.0
-offset_bottom = 33.0
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 36.0
+offset_right = 181.0
+offset_bottom = 123.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -39,15 +40,17 @@ alignment = 1
 [node name="Jogar" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_kdje8")
+theme_override_fonts/font = ExtResource("2_7cyau")
 text = "Jogar"
-script = ExtResource("2_3u7uu")
 
 [node name="Opções" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7cyau")
 text = "Opções"
 
 [node name="Sair" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7cyau")
 text = "Sair"
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Menu"]
@@ -60,8 +63,6 @@ position = Vector2(578, 323.5)
 scale = Vector2(1.02404, 0.909986)
 texture = ExtResource("2_k4tk7")
 
-[connection signal="mouse_entered" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_mouse_exited"]
-[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu/MarginContainer/VBoxContainer/Jogar" method="_on_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opções" to="Menu" method="_on_opções_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Sair" to="Menu" method="_on_sair_pressed"]
