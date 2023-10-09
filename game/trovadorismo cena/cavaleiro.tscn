@@ -1,9 +1,9 @@
 [gd_scene load_steps=25 format=3 uid="uid://f63q3noopyou"]
 
-[ext_resource type="Texture2D" uid="uid://baj0oph7ce2ch" path="res://assets/cavaleiro/knight 3 idle.png" id="1_5x2xs"]
+[ext_resource type="Texture2D" uid="uid://baj0oph7ce2ch" path="res://assets/trovadorismo assets/cavaleiro/knight 3 idle.png" id="1_5x2xs"]
 [ext_resource type="Script" path="res://trovadorismo cena/cavaleiro.gd" id="1_wprdl"]
-[ext_resource type="Texture2D" uid="uid://bm6qcni8eoe35" path="res://assets/cavaleiro/knight death animation.png" id="2_m51it"]
-[ext_resource type="Texture2D" uid="uid://da37p7qqmldjs" path="res://assets/cavaleiro/knight walk animation.png" id="3_218sa"]
+[ext_resource type="Texture2D" uid="uid://bm6qcni8eoe35" path="res://assets/trovadorismo assets/cavaleiro/knight death animation.png" id="2_m51it"]
+[ext_resource type="Texture2D" uid="uid://da37p7qqmldjs" path="res://assets/trovadorismo assets/cavaleiro/knight walk animation.png" id="3_218sa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yonry"]
 atlas = ExtResource("2_m51it")
@@ -146,7 +146,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 6.0
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6njo5"]
@@ -157,7 +157,7 @@ script = ExtResource("1_wprdl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6nyui")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

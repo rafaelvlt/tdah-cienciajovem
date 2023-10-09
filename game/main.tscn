@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_67bn1"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="2_7cyau"]
-[ext_resource type="Texture2D" uid="uid://djmib6kg5d43" path="res://assets/saladeaula.jpg" id="2_k4tk7"]
+[ext_resource type="Texture2D" uid="uid://buwpfoh52o2ml" path="res://assets/backgroundteste.png" id="3_1jmsa"]
 
 [sub_resource type="Theme" id="Theme_kdje8"]
 
 [node name="Main" type="Node2D"]
-position = Vector2(527, 273)
+position = Vector2(192, 437)
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
@@ -16,6 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_67bn1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
@@ -41,7 +43,7 @@ alignment = 1
 layout_mode = 2
 theme = SubResource("Theme_kdje8")
 theme_override_fonts/font = ExtResource("2_7cyau")
-text = "Jogar"
+text = "Sala de Aula"
 
 [node name="Opções" type="Button" parent="Menu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -57,11 +59,12 @@ text = "Sair"
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Menu/ParallaxBackground"]
 z_index = -1
+position = Vector2(-17, 10)
 
 [node name="Saladeaula" type="Sprite2D" parent="Menu/ParallaxBackground/ParallaxLayer"]
-position = Vector2(578, 323.5)
-scale = Vector2(1.02404, 0.909986)
-texture = ExtResource("2_k4tk7")
+position = Vector2(304.293, 504)
+scale = Vector2(0.82202, 0.823151)
+texture = ExtResource("3_1jmsa")
 
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opções" to="Menu" method="_on_opções_pressed"]
