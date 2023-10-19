@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5vpw3jdpen48"
+path="res://.godot/imported/Medieval Vol. 2 8.wav-cac3cc51e1284c52d9727ec7b26f7913.sample"
+
+[deps]
+
+source_file="res://assets/musicas/wav/Medieval Vol. 2 8.wav"
+dest_files=["res://.godot/imported/Medieval Vol. 2 8.wav-cac3cc51e1284c52d9727ec7b26f7913.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
