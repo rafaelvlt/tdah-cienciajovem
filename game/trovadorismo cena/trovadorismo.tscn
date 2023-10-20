@@ -1,15 +1,14 @@
-[gd_scene load_steps=16 format=3 uid="uid://8io85oyx4667"]
+[gd_scene load_steps=15 format=3 uid="uid://8io85oyx4667"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="1_2ywbf"]
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismo.gd" id="1_x1auq"]
 [ext_resource type="Texture2D" uid="uid://b82pkbqslqg8p" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="2_7mk7t"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="2_ftjwe"]
 [ext_resource type="PackedScene" uid="uid://f63q3noopyou" path="res://trovadorismo cena/cavaleiro.tscn" id="2_trxi3"]
 [ext_resource type="PackedScene" uid="uid://dqte2afbxpoo8" path="res://trovadorismo cena/princesa.tscn" id="3_gwpsa"]
 [ext_resource type="Texture2D" uid="uid://d22fsdb8ulypd" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Background/Background.png" id="3_u2gfr"]
 [ext_resource type="Texture2D" uid="uid://bsy4l1nbj3gyc" path="res://assets/trovadorismo assets/teste pixel.png" id="5_u22al"]
 [ext_resource type="PackedScene" uid="uid://c0olhvgny1ur5" path="res://trovadorismo cena/audio_stream_player.tscn" id="9_4u8i1"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="10_g7esl"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="10_g7esl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vwsn"]
 size = Vector2(50, 50)
@@ -2894,7 +2893,7 @@ alignment = 0
 z_index = 1
 position = Vector2(125.629, 42.7143)
 scale = Vector2(0.465594, 0.981863)
-texture = ExtResource("2_ftjwe")
+texture = ExtResource("10_g7esl")
 region_enabled = true
 region_rect = Rect2(48, 208, 16, 16)
 

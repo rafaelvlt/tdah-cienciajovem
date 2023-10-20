@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cag1oyvqbod87"]
+
+[ext_resource type="Script" path="res://trovadorismo cena/score.gd" id="1_h5aeb"]
+
+[node name="Score" type="Node2D"]
+script = ExtResource("1_h5aeb")
