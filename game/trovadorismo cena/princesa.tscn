@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dqte2afbxpoo8"]
+[gd_scene load_steps=9 format=3 uid="uid://dqte2afbxpoo8"]
 
 [ext_resource type="Texture2D" uid="uid://b36vdwoy6ib1w" path="res://assets/trovadorismo assets/Lively_NPCs_v3.0/sprite sheets/medieval/princess.png" id="1_2yjcp"]
 [ext_resource type="Script" path="res://trovadorismo cena/princesa.gd" id="1_g31yp"]
@@ -41,9 +41,6 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nudht"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l1tl"]
-size = Vector2(50, 50)
-
 [node name="Princesa" type="CharacterBody2D"]
 script = ExtResource("1_g31yp")
 
@@ -57,9 +54,3 @@ frame_progress = 0.450511
 position = Vector2(0, 5)
 scale = Vector2(1.2, 1.2)
 shape = SubResource("CapsuleShape2D_nudht")
-
-[node name="iniciar dialogo" type="TouchScreenButton" parent="."]
-position = Vector2(-1, 7)
-scale = Vector2(1.4, 1.4)
-shape = SubResource("RectangleShape2D_2l1tl")
-action = "interact"

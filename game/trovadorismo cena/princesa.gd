@@ -20,7 +20,10 @@ mostrade-me-a algo possa con ela falar,
 se non dade-me-a morte."
 ]
 
+var poemadeclamado = false
 func _unhandled_input(event):
-	if event.is_action_pressed("interact"):
-			DialogManager.start_dialog(Vector2(300, 300), lines)
+	if event.is_action_pressed("interact") and poemadeclamado == false:
+			DialogManager.start_dialog(Vector2(300, 500), lines)
 			
+	else:
+		return

@@ -1,8 +1,21 @@
 extends CharacterBody2D
 
-@export var speed : float = 200.0
-@export var jumpVelocity : float = -300.0
+@export var speed : float = 150.0
 @onready var animaçãoGuerreiro : AnimatedSprite2D = $AnimatedSprite2D
+
+var destination = Vector2()
+var distance = Vector2()
+func _ready():
+	destination = position
+func _process(delta):
+	if(position != destination):
+		distance = Vector2(destination - position)
+		velocity.x = distance.normalized().x * speed
+		velocity.y = distance.normalized().x * 0
+		move_and_slide()
+		update_animation()
+		update_facing_direction()
+	pass
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -10,24 +23,6 @@ var animationLocked : bool = false
 var direction : Vector2 = Vector2.ZERO
 
 
-func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
-	# Handle Jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = jumpVelocity
-
-	if direction:
-		velocity.x = direction.x * speed
-	else:
-		velocity.x = move_toward(velocity.x, 0, speed)
-
-	move_and_slide()
-	update_animation()
-	update_facing_direction()
-	
 func update_animation():
 	if not animationLocked:
 		if direction.x != 0:

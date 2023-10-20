@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://8io85oyx4667"]
+[gd_scene load_steps=15 format=3 uid="uid://8io85oyx4667"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="1_2ywbf"]
+[ext_resource type="Script" path="res://trovadorismo cena/trovadorismo.gd" id="1_x1auq"]
 [ext_resource type="Texture2D" uid="uid://b82pkbqslqg8p" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png" id="2_7mk7t"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="2_ftjwe"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="2_ftjwe"]
 [ext_resource type="PackedScene" uid="uid://f63q3noopyou" path="res://trovadorismo cena/cavaleiro.tscn" id="2_trxi3"]
 [ext_resource type="PackedScene" uid="uid://dqte2afbxpoo8" path="res://trovadorismo cena/princesa.tscn" id="3_gwpsa"]
 [ext_resource type="Texture2D" uid="uid://d22fsdb8ulypd" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Background/Background.png" id="3_u2gfr"]
@@ -2839,11 +2840,16 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_es0he")
 sources/1 = SubResource("TileSetAtlasSource_30mai")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vwsn"]
+size = Vector2(50, 50)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upexp"]
+size = Vector2(10, 5)
 
 [node name="trovadorismo" type="Node2D"]
 position = Vector2(-16, -247)
 scale = Vector2(2, 2.5)
+script = ExtResource("1_x1auq")
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -2897,7 +2903,21 @@ position = Vector2(33, 445.6)
 [node name="Princesa" parent="." instance=ExtResource("3_gwpsa")]
 position = Vector2(272, 339.2)
 
+[node name="Button" type="Button" parent="Princesa"]
+offset_left = -30.5
+offset_top = -14.0
+offset_right = 28.5
+offset_bottom = 38.0
+flat = true
+
+[node name="iniciar dialogo2" type="TouchScreenButton" parent="Princesa/Button"]
+position = Vector2(29.5, 22)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("RectangleShape2D_2vwsn")
+action = "interact"
+
 [node name="Plano de Fundo" type="Node2D" parent="."]
+visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Plano de Fundo"]
 z_index = -1
@@ -2910,8 +2930,8 @@ position = Vector2(288.5, 408)
 scale = Vector2(2, 2)
 texture = ExtResource("5_u22al")
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(148.5, 372.8)
+[node name="dialogo" type="TouchScreenButton" parent="."]
+position = Vector2(139.5, 256.4)
 scale = Vector2(-17.4437, -24.2695)
 shape = SubResource("RectangleShape2D_upexp")
 action = "advance_dialog"
