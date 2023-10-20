@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0olhvgny1ur5"]
+
+[ext_resource type="AudioStream" uid="uid://d0ipi4712udrh" path="res://assets/musicas/wav/Medieval Vol. 2 1.wav" id="1_m8tp7"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_m8tp7")
+volume_db = -20.306
+autoplay = true

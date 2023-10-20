@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8io85oyx4667"]
+[gd_scene load_steps=16 format=3 uid="uid://8io85oyx4667"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="1_2ywbf"]
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismo.gd" id="1_x1auq"]
@@ -8,7 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://dqte2afbxpoo8" path="res://trovadorismo cena/princesa.tscn" id="3_gwpsa"]
 [ext_resource type="Texture2D" uid="uid://d22fsdb8ulypd" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Background/Background.png" id="3_u2gfr"]
 [ext_resource type="Texture2D" uid="uid://bsy4l1nbj3gyc" path="res://assets/trovadorismo assets/teste pixel.png" id="5_u22al"]
-[ext_resource type="AudioStream" uid="uid://d0ipi4712udrh" path="res://assets/musicas/wav/Medieval Vol. 2 1.wav" id="8_ns68d"]
+[ext_resource type="PackedScene" uid="uid://c0olhvgny1ur5" path="res://trovadorismo cena/audio_stream_player.tscn" id="9_4u8i1"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="10_g7esl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vwsn"]
+size = Vector2(50, 50)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_es0he"]
 texture = ExtResource("2_7mk7t")
@@ -2840,9 +2844,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_es0he")
 sources/1 = SubResource("TileSetAtlasSource_30mai")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vwsn"]
-size = Vector2(50, 50)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upexp"]
 size = Vector2(10, 5)
 
@@ -2850,6 +2851,12 @@ size = Vector2(10, 5)
 position = Vector2(-16, -247)
 scale = Vector2(2, 2.5)
 script = ExtResource("1_x1auq")
+
+[node name="iniciar dialogo2" type="TouchScreenButton" parent="."]
+position = Vector2(271, 346.2)
+scale = Vector2(1.4, 1.4)
+shape = SubResource("RectangleShape2D_2vwsn")
+action = "interact"
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
@@ -2903,27 +2910,14 @@ position = Vector2(33, 445.6)
 [node name="Princesa" parent="." instance=ExtResource("3_gwpsa")]
 position = Vector2(272, 339.2)
 
-[node name="Button" type="Button" parent="Princesa"]
-offset_left = -30.5
-offset_top = -14.0
-offset_right = 28.5
-offset_bottom = 38.0
-flat = true
-
-[node name="iniciar dialogo2" type="TouchScreenButton" parent="Princesa/Button"]
-position = Vector2(29.5, 22)
-scale = Vector2(1.4, 1.4)
-shape = SubResource("RectangleShape2D_2vwsn")
-action = "interact"
-
 [node name="Plano de Fundo" type="Node2D" parent="."]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Plano de Fundo"]
 z_index = -1
 position = Vector2(147.25, 256)
 scale = Vector2(0.663542, 1.88235)
 texture = ExtResource("3_u2gfr")
+metadata/_edit_group_ = true
 
 [node name="TestePixel" type="Sprite2D" parent="Plano de Fundo"]
 position = Vector2(288.5, 408)
@@ -2936,9 +2930,31 @@ scale = Vector2(-17.4437, -24.2695)
 shape = SubResource("RectangleShape2D_upexp")
 action = "advance_dialog"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_ns68d")
-volume_db = -20.306
-autoplay = true
+[node name="AudioStreamPlayer" parent="." instance=ExtResource("9_4u8i1")]
+autoplay = false
+
+[node name="próxima fase" type="Button" parent="."]
+z_index = 1
+offset_left = 8.0
+offset_top = 108.0
+offset_right = 83.0
+offset_bottom = 141.0
+focus_mode = 0
+keep_pressed_outside = true
+flat = true
+
+[node name="Base-01" type="Sprite2D" parent="próxima fase"]
+position = Vector2(40, 15.2)
+scale = Vector2(4.375, 1.7)
+texture = ExtResource("10_g7esl")
+region_enabled = true
+region_rect = Rect2(0, 176, 16, 16)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
 
 [connection signal="pressed" from="UI/MarginContainer/Button" to="UI" method="_on_button_pressed"]
+[connection signal="pressed" from="próxima fase" to="UI" method="_on_próxima_fase_pressed"]
+[connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

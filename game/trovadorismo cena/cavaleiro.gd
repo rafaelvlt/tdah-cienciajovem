@@ -7,7 +7,7 @@ var destination = Vector2()
 var distance = Vector2()
 func _ready():
 	destination = position
-func _process(delta):
+func _process(_delta):
 	if(position != destination):
 		distance = Vector2(destination - position)
 		velocity.x = distance.normalized().x * speed
