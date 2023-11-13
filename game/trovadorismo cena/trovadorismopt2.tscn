@@ -1,7 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dc5ejqmx0hjfj"]
+[gd_scene load_steps=18 format=3 uid="uid://co68bukixhvb1"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismopt2.gd" id="1_3lf8a"]
-[ext_resource type="PackedScene" uid="uid://cag1oyvqbod87" path="res://trovadorismo cena/score.tscn" id="1_5n70w"]
+[ext_resource type="PackedScene" path="res://trovadorismo cena/score.tscn" id="1_5n70w"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="1_axk0c"]
 [ext_resource type="Texture2D" uid="uid://dejwxyctsbbl2" path="res://assets/trovadorismo assets/ecbb8a7a8093fb9.png" id="1_q7skh"]
 [ext_resource type="Script" path="res://trovadorismo cena/Placar.gd" id="2_volxt"]
@@ -154,6 +154,7 @@ region_enabled = true
 region_rect = Rect2(0, 176, 16, 16)
 
 [node name="Label" type="Label" parent="UI/próxima fase2"]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 26.0
 offset_right = 178.0

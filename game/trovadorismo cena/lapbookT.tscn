@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ckfvms4bbvn83"]
+
+[node name="Lapbook" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+custom_minimum_size = Vector2(576, 0)
+offset_right = 576.0
+offset_bottom = 1024.0
+
+[node name="Node2D" type="Node2D" parent="."]
