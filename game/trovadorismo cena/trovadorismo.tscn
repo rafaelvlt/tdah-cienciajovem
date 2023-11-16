@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dqte2afbxpoo8" path="res://trovadorismo cena/princesa.tscn" id="3_gwpsa"]
 [ext_resource type="Texture2D" uid="uid://d22fsdb8ulypd" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/Background/Background.png" id="3_u2gfr"]
 [ext_resource type="Texture2D" uid="uid://bsy4l1nbj3gyc" path="res://assets/trovadorismo assets/teste pixel.png" id="5_u22al"]
-[ext_resource type="PackedScene" uid="uid://c0olhvgny1ur5" path="res://trovadorismo cena/audio_stream_player.tscn" id="9_4u8i1"]
+[ext_resource type="PackedScene" path="res://trovadorismo cena/audio_stream_player.tscn" id="9_4u8i1"]
 [ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="10_g7esl"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="10_gjj5f"]
 [ext_resource type="Texture2D" uid="uid://d4dohwmumgtsx" path="res://assets/trovadorismo assets/livro/pixel books/laser-book-pixilart.png" id="11_43u8f"]
