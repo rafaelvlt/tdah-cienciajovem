@@ -1,155 +1,245 @@
-[gd_scene load_steps=9 format=3 uid="uid://dal4g8jdqc81h"]
+[gd_scene load_steps=12 format=3 uid="uid://cmxahnmpaf6ka"]
 
+[ext_resource type="Script" path="res://trovadorismo cena/trovadorismolapbook.gd" id="1_546vv"]
 [ext_resource type="Texture2D" uid="uid://fottx8lhshj4" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (5).jpeg" id="1_ahgem"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="2_cqrxv"]
 [ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="2_djbbd"]
-[ext_resource type="Texture2D" uid="uid://bims5om8tx5bv" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (4).jpeg" id="2_madm2"]
-[ext_resource type="Texture2D" uid="uid://bguehp00657su" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (3).jpeg" id="2_nljwl"]
 [ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_aud2l"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="6_xf7i0"]
 [ext_resource type="Texture2D" uid="uid://bhh0vyvelhxij" path="res://assets/trovadorismo assets/perguntas assets/kisspng-sprite-space-station-13-clown-pixel-art-clown-5ad20a501bf318.3621064715237146401145.png" id="7_41tak"]
+[ext_resource type="Texture2D" uid="uid://ckkn0e0uwtbb3" path="res://assets/trovadorismo assets/perguntas assets/pixel-art-paw-prints-rug-graphics-transparent-png-1110298.png" id="7_120ss"]
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="8_emadq"]
+[ext_resource type="Texture2D" uid="uid://b4lierip5ycx4" path="res://assets/trovadorismo assets/perguntas assets/pngwing.com.png" id="8_pm5px"]
+[ext_resource type="Texture2D" uid="uid://bsd0b16li8ovv" path="res://assets/trovadorismo assets/lapbookassets/portugalmapa.jpeg" id="9_k0fbm"]
 
 [node name="trovadorismolapbook" type="Node2D"]
+script = ExtResource("1_546vv")
 
 [node name="BG" type="Node2D" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="BG"]
-z_index = -4
-offset_right = 768.0
-offset_bottom = 1280.0
-color = Color(0.957031, 0.929688, 0.726563, 1)
-
 [node name="Pedrosprite(5)" type="Sprite2D" parent="BG"]
 z_index = -3
-position = Vector2(288, 296)
-scale = Vector2(0.908203, 0.995117)
+position = Vector2(293, 331.875)
+scale = Vector2(1.14844, 1.34717)
 texture = ExtResource("1_ahgem")
-metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+z_index = -6
+offset_right = 768.0
+offset_bottom = 1280.0
+color = Color(0.960784, 0.933333, 0.729412, 1)
 
 [node name="caixadetexto" type="Node2D" parent="."]
 
-[node name="clickaveis" type="Node2D" parent="."]
-position = Vector2(153, 296)
+[node name="Moldura Texto" type="Sprite2D" parent="caixadetexto"]
+position = Vector2(289.5, 831.5)
+scale = Vector2(8.79688, 4.42187)
+texture = ExtResource("2_cqrxv")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
 
-[node name="Pedrosprite(3)" type="Sprite2D" parent="clickaveis"]
-position = Vector2(277, 17)
-scale = Vector2(0.127441, 0.182551)
-texture = ExtResource("2_nljwl")
+[node name="Explicacao" type="Label" parent="caixadetexto"]
+offset_left = 19.0
+offset_top = 699.0
+offset_right = 2378.0
+offset_bottom = 956.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 22
+text = "O Trovadorismo refere-se a um movimento
+literário e musical medieval que surgiu na
+Península Ibérica durante os séculos XII a
+XIV. Abrange vários géneros poéticos escritos
+em galego-português, com temas que vão do
+amor cortês à sátira. Os trovadores, ou
+trovadores, compunham poesia em formas
+como \"Cantigas de amor\", \"Cantigas de amigo\"
+ e \"Cantigas de escárnio\"."
+
+[node name="clickaveis" type="Node2D" parent="."]
+position = Vector2(148, 241.75)
+
+[node name="Portugalmapa" type="Sprite2D" parent="clickaveis"]
+position = Vector2(147, 186.5)
+scale = Vector2(0.40625, 0.434122)
+texture = ExtResource("9_k0fbm")
 
 [node name="HeartPixelArt32x32" type="Sprite2D" parent="clickaveis"]
-position = Vector2(-3, 0)
+position = Vector2(-27.5, 116.75)
+scale = Vector2(2.34375, 2.26563)
 texture = ExtResource("2_djbbd")
-
-[node name="Pedrosprite(4)" type="Sprite2D" parent="clickaveis"]
-position = Vector2(-4.09375, 155.348)
-scale = Vector2(0.124634, 0.121525)
-texture = ExtResource("2_madm2")
-region_enabled = true
-region_rect = Rect2(0, 8, 512, 488)
 
 [node name="texto" type="Sprite2D" parent="clickaveis"]
 z_index = -1
-position = Vector2(141, -47)
-scale = Vector2(2.79687, 2.1875)
+position = Vector2(147, 25)
+scale = Vector2(3.03125, 2.1875)
 texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
 [node name="Label" type="Label" parent="clickaveis"]
-offset_left = 90.0
-offset_top = -55.0
-offset_right = 243.0
-offset_bottom = -36.0
+offset_left = 78.0
+offset_top = 14.0
+offset_right = 231.0
+offset_bottom = 37.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xf7i0")
-theme_override_font_sizes/font_size = 15
+theme_override_font_sizes/font_size = 20
 text = "Trovadorismo"
-metadata/_edit_group_ = true
-
-[node name="texto2" type="Sprite2D" parent="clickaveis"]
-z_index = -1
-position = Vector2(-1.53125, -42)
-scale = Vector2(1.1709, 2.28125)
-texture = ExtResource("5_aud2l")
-region_enabled = true
-region_rect = Rect2(0, 64, 64, 16)
 
 [node name="Label2" type="Label" parent="clickaveis"]
-offset_left = -22.0
-offset_top = -54.0
-offset_right = 46.0
-offset_bottom = -32.0
+offset_left = -65.0
+offset_top = 20.0
+offset_right = 10.0
+offset_bottom = 54.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xf7i0")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = " Cantiga 
 de amor"
-metadata/_edit_group_ = true
 
 [node name="texto3" type="Sprite2D" parent="clickaveis"]
 z_index = -1
-position = Vector2(-1, 99)
-scale = Vector2(1.1084, 2.26562)
+position = Vector2(-27, 222.5)
+scale = Vector2(1.4375, 3.4375)
 texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
 [node name="Label3" type="Label" parent="clickaveis"]
-offset_left = -27.0
-offset_top = 86.0
-offset_right = 44.0
-offset_bottom = 108.0
+offset_left = -67.0
+offset_top = 205.0
+offset_right = 7.0
+offset_bottom = 240.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xf7i0")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = " Cantiga 
 de amigo"
-metadata/_edit_group_ = true
 
 [node name="texto4" type="Sprite2D" parent="clickaveis"]
 z_index = -1
-position = Vector2(276, -39)
-scale = Vector2(1.15625, 2.1875)
+position = Vector2(323.5, 41)
+scale = Vector2(1.45312, 3)
 texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
 [node name="Label4" type="Label" parent="clickaveis"]
-offset_left = 243.0
-offset_top = -50.0
-offset_right = 314.0
-offset_bottom = -28.0
+offset_left = 287.0
+offset_top = 21.0
+offset_right = 359.0
+offset_bottom = 51.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xf7i0")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = " Cantiga 
 de maldizer"
-metadata/_edit_group_ = true
 
 [node name="Kisspng-sprite-space-station-13-clown-pixel-art-clown-5Ad20a501Bf318_3621064715237146401145" type="Sprite2D" parent="clickaveis"]
-position = Vector2(294, 162)
-scale = Vector2(0.15979, 0.127075)
+position = Vector2(347, 310)
+scale = Vector2(0.209961, 0.155792)
 texture = ExtResource("7_41tak")
 
 [node name="texto5" type="Sprite2D" parent="clickaveis"]
 z_index = -1
-position = Vector2(277, 100)
-scale = Vector2(1.15625, 2.1875)
+position = Vector2(327, 217)
+scale = Vector2(1.51563, 3.65625)
 texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
 [node name="Label5" type="Label" parent="clickaveis"]
-offset_left = 247.0
-offset_top = 90.0
-offset_right = 318.0
-offset_bottom = 112.0
+offset_left = 288.0
+offset_top = 199.0
+offset_right = 361.0
+offset_bottom = 234.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_xf7i0")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 12
 text = " Cantiga 
 de escárnio"
-metadata/_edit_group_ = true
+
+[node name="texto6" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(-25, 35)
+scale = Vector2(1.47876, 3.31347)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="texto7" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(149.5, 344)
+scale = Vector2(3.39062, 2.15625)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label6" type="Label" parent="clickaveis"]
+offset_left = 53.0
+offset_top = 331.0
+offset_right = 253.0
+offset_bottom = 366.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 18
+text = "Contexto Histórico"
+
+[node name="Pixel-art-paw-prints-rug-graphics-transparent-png-1110298" type="Sprite2D" parent="clickaveis"]
+position = Vector2(-30, 303)
+scale = Vector2(0.106294, 0.127208)
+texture = ExtResource("7_120ss")
+
+[node name="Pngwing_com" type="Sprite2D" parent="clickaveis"]
+position = Vector2(332, 121.922)
+scale = Vector2(0.160284, 0.112329)
+texture = ExtResource("8_pm5px")
+
+[node name="amor" type="Button" parent="clickaveis"]
+offset_left = -79.0
+offset_top = 5.0
+offset_right = 29.0
+offset_bottom = 169.0
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="amigo" type="Button" parent="clickaveis"]
+offset_left = -79.0
+offset_top = 198.25
+offset_right = 29.0
+offset_bottom = 362.25
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="maldizer" type="Button" parent="clickaveis"]
+offset_left = 276.0
+offset_top = 25.2501
+offset_right = 384.0
+offset_bottom = 189.25
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="escarnio" type="Button" parent="clickaveis"]
+offset_left = 276.0
+offset_top = 204.25
+offset_right = 384.0
+offset_bottom = 368.25
+focus_mode = 0
+toggle_mode = true
+flat = true
+
+[node name="contexto" type="Button" parent="clickaveis"]
+offset_left = 32.0
+offset_top = 60.0
+offset_right = 271.0
+offset_bottom = 370.0
+focus_mode = 0
+toggle_mode = true
+flat = true
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
@@ -191,4 +281,9 @@ texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 240, 16, 16)
 
+[connection signal="pressed" from="clickaveis/amor" to="." method="_on_amor_pressed"]
+[connection signal="pressed" from="clickaveis/amigo" to="." method="_on_amigo_pressed"]
+[connection signal="pressed" from="clickaveis/maldizer" to="." method="_on_maldizer_pressed"]
+[connection signal="pressed" from="clickaveis/escarnio" to="." method="_on_escarnio_pressed"]
+[connection signal="pressed" from="clickaveis/contexto" to="." method="_on_contexto_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]
