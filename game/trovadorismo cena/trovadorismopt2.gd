@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var flag1 = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_node("UI/Resposta").visible = false
@@ -20,9 +20,12 @@ mais profundidade, sendo que o
 tema mais frequente é o sofrimento
 amoroso.
 + 100 pontos!"
-	Global.pontos += 100
-	get_node("UI/próxima fase2").visible = true
-
+	if flag1 == false:
+		flag1 = true
+		Global.pontos += 100
+		get_node("UI/próxima fase2").visible = true
+	else:
+		pass
 func _on_maldizer_pressed():
 	get_node("UI/Resposta").visible = true
 	get_node("UI/Base-02").visible = true

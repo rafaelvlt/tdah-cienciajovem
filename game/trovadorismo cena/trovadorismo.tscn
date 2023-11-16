@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8io85oyx4667"]
+[gd_scene load_steps=17 format=3 uid="uid://8io85oyx4667"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="1_2ywbf"]
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismo.gd" id="1_x1auq"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bsy4l1nbj3gyc" path="res://assets/trovadorismo assets/teste pixel.png" id="5_u22al"]
 [ext_resource type="PackedScene" path="res://trovadorismo cena/audio_stream_player.tscn" id="9_4u8i1"]
 [ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="10_g7esl"]
+[ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="10_gjj5f"]
+[ext_resource type="Texture2D" uid="uid://d4dohwmumgtsx" path="res://assets/trovadorismo assets/livro/pixel books/laser-book-pixilart.png" id="11_43u8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2vwsn"]
 size = Vector2(50, 50)
@@ -2857,7 +2859,7 @@ scale = Vector2(1.4, 1.4)
 shape = SubResource("RectangleShape2D_2vwsn")
 action = "interact"
 
-[node name="UI" type="Control" parent="."]
+[node name="Menu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
@@ -2871,7 +2873,7 @@ scale = Vector2(2.39993, 0.833445)
 size_flags_horizontal = 4
 script = ExtResource("1_2ywbf")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI"]
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -2883,19 +2885,19 @@ offset_bottom = 55.0
 grow_horizontal = 0
 scale = Vector2(0.973056, 0.819522)
 
-[node name="Button" type="Button" parent="UI/MarginContainer"]
+[node name="Button" type="Button" parent="Menu/MarginContainer"]
 layout_mode = 2
 focus_mode = 0
 flat = true
 alignment = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
+[node name="Sprite2D" type="Sprite2D" parent="Menu"]
 z_index = 1
 position = Vector2(125.629, 42.7143)
 scale = Vector2(0.465594, 0.981863)
 texture = ExtResource("10_g7esl")
 region_enabled = true
-region_rect = Rect2(48, 208, 16, 16)
+region_rect = Rect2(0, 240, 16, 16)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1ikjh")
@@ -2934,26 +2936,98 @@ autoplay = false
 
 [node name="próxima fase" type="Button" parent="."]
 z_index = 1
-offset_left = 8.0
-offset_top = 108.0
-offset_right = 83.0
-offset_bottom = 141.0
+offset_left = 15.0
+offset_top = 138.0
+offset_right = 97.0
+offset_bottom = 155.0
 focus_mode = 0
 keep_pressed_outside = true
 flat = true
 
-[node name="Base-01" type="Sprite2D" parent="próxima fase"]
-position = Vector2(40, 15.2)
-scale = Vector2(4.375, 1.7)
+[node name="Botao" type="Sprite2D" parent="próxima fase"]
+position = Vector2(37, -4)
+scale = Vector2(1.21875, 1)
 texture = ExtResource("10_g7esl")
 region_enabled = true
-region_rect = Rect2(0, 176, 16, 16)
+region_rect = Rect2(48, 192, 16, 16)
+
+[node name="Sprite2D" type="Sprite2D" parent="próxima fase"]
+z_index = -1
+position = Vector2(39, 10.4)
+scale = Vector2(0.769531, 1)
+texture = ExtResource("10_g7esl")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label" type="Label" parent="próxima fase"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -2.9
+offset_right = 68.0
+offset_bottom = 21.1
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_gjj5f")
+theme_override_font_sizes/font_size = 15
+text = "Quiz"
+
+[node name="lapbook" type="Button" parent="."]
+z_index = 1
+offset_left = 200.0
+offset_top = 138.0
+offset_right = 282.0
+offset_bottom = 155.0
+focus_mode = 0
+keep_pressed_outside = true
+flat = true
+
+[node name="Botao" type="Sprite2D" parent="lapbook"]
+position = Vector2(36, -5.59999)
+scale = Vector2(0.347356, 0.241758)
+texture = ExtResource("11_43u8f")
+region_enabled = true
+region_rect = Rect2(0, 0, 52, 52)
+
+[node name="Sprite2D" type="Sprite2D" parent="lapbook"]
+z_index = -1
+position = Vector2(39, 10.4)
+scale = Vector2(0.769531, 1)
+texture = ExtResource("10_g7esl")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label" type="Label" parent="lapbook"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -2.5
+offset_right = 74.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_gjj5f")
+theme_override_font_sizes/font_size = 15
+text = "Aprender"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
 
-[connection signal="pressed" from="UI/MarginContainer/Button" to="UI" method="_on_button_pressed"]
-[connection signal="pressed" from="próxima fase" to="UI" method="_on_próxima_fase_pressed"]
+[connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]
+[connection signal="pressed" from="próxima fase" to="Menu" method="_on_próxima_fase_pressed"]
+[connection signal="pressed" from="lapbook" to="Menu" method="_on_lapbook_pressed"]
 [connection signal="ready" from="Timer" to="." method="_on_timer_ready"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
