@@ -4,7 +4,8 @@ extends Node2D
 @onready var princesa = get_tree().get_root().get_node("trovadorismo").get_node("Princesa")
 
 func _ready():
-	get_node("próxima fase").visible = false
+	#get_node("próxima fase").visible = false
+	#get_node("lapbook").visible = false
 	$Timer.start()
 	
 func _unhandled_input(event):
@@ -18,9 +19,4 @@ func _unhandled_input(event):
 
 func _on_timer_timeout():
 	get_node("próxima fase").visible = true
-
-
-
-
-
-
+	get_node("lapbook").visible = true

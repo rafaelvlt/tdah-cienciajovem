@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://b37etmhg3thk4"]
+
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="1_nq2ek"]
+[ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="2_ghg5d"]
+
+[node name="Amor" type="Button"]
+offset_left = 68.0
+offset_top = 583.0
+offset_right = 275.0
+offset_bottom = 646.0
+focus_mode = 0
+flat = true
+metadata/_edit_group_ = true
+
+[node name="Base-01" type="Sprite2D" parent="."]
+position = Vector2(13.5625, 27.875)
+scale = Vector2(3.05469, -3.01562)
+texture = ExtResource("1_nq2ek")
+region_enabled = true
+region_rect = Rect2(64, 64, 16, 16)
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 17.0
+offset_right = 194.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ghg5d")
+theme_override_font_sizes/font_size = 15
+text = "Cantiga de Amor"
+metadata/_edit_group_ = true
+
+[node name="Base-02" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(119, 29)
+scale = Vector2(2.63281, -2.8125)
+texture = ExtResource("1_nq2ek")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+metadata/_edit_group_ = true

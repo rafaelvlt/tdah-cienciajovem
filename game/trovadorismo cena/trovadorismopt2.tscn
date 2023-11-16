@@ -154,6 +154,7 @@ region_enabled = true
 region_rect = Rect2(0, 176, 16, 16)
 
 [node name="Label" type="Label" parent="UI/próxima fase2"]
+layout_mode = 0
 offset_left = 25.0
 offset_top = 26.0
 offset_right = 178.0
@@ -347,7 +348,6 @@ scale = Vector2(0.0557367, 0.0511734)
 texture = ExtResource("10_m0xcx")
 
 [connection signal="pressed" from="UI/próxima fase2" to="." method="_on_próxima_fase_2_pressed"]
-[connection signal="pressed" from="Botões/Amor" to="." method="_on_amor_pressed"]
 [connection signal="pressed" from="Botões/maldizer" to="." method="_on_maldizer_pressed"]
 [connection signal="pressed" from="Botões/Escarnio" to="." method="_on_escarnio_pressed"]
 [connection signal="pressed" from="Botões/Amigo" to="." method="_on_amigo_pressed"]

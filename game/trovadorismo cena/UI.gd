@@ -15,3 +15,8 @@ func _on_button_pressed():
 func _on_próxima_fase_pressed():
 	if DialogManager.is_dialog_active == false:
 		get_tree().change_scene_to_file("res://trovadorismo cena/trovadorismopt2.tscn")
+
+
+func _on_lapbook_pressed():
+	if DialogManager.is_dialog_active == false:
+		get_tree().change_scene_to_file("res://trovadorismo cena/trovadorismolapbook.tscn") 

@@ -1,0 +1,194 @@
+[gd_scene load_steps=9 format=3 uid="uid://dal4g8jdqc81h"]
+
+[ext_resource type="Texture2D" uid="uid://fottx8lhshj4" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (5).jpeg" id="1_ahgem"]
+[ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="2_djbbd"]
+[ext_resource type="Texture2D" uid="uid://bims5om8tx5bv" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (4).jpeg" id="2_madm2"]
+[ext_resource type="Texture2D" uid="uid://bguehp00657su" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (3).jpeg" id="2_nljwl"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_aud2l"]
+[ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="6_xf7i0"]
+[ext_resource type="Texture2D" uid="uid://bhh0vyvelhxij" path="res://assets/trovadorismo assets/perguntas assets/kisspng-sprite-space-station-13-clown-pixel-art-clown-5ad20a501bf318.3621064715237146401145.png" id="7_41tak"]
+[ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="8_emadq"]
+
+[node name="trovadorismolapbook" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+z_index = -4
+offset_right = 768.0
+offset_bottom = 1280.0
+color = Color(0.957031, 0.929688, 0.726563, 1)
+
+[node name="Pedrosprite(5)" type="Sprite2D" parent="BG"]
+z_index = -3
+position = Vector2(288, 296)
+scale = Vector2(0.908203, 0.995117)
+texture = ExtResource("1_ahgem")
+metadata/_edit_lock_ = true
+
+[node name="caixadetexto" type="Node2D" parent="."]
+
+[node name="clickaveis" type="Node2D" parent="."]
+position = Vector2(153, 296)
+
+[node name="Pedrosprite(3)" type="Sprite2D" parent="clickaveis"]
+position = Vector2(277, 17)
+scale = Vector2(0.127441, 0.182551)
+texture = ExtResource("2_nljwl")
+
+[node name="HeartPixelArt32x32" type="Sprite2D" parent="clickaveis"]
+position = Vector2(-3, 0)
+texture = ExtResource("2_djbbd")
+
+[node name="Pedrosprite(4)" type="Sprite2D" parent="clickaveis"]
+position = Vector2(-4.09375, 155.348)
+scale = Vector2(0.124634, 0.121525)
+texture = ExtResource("2_madm2")
+region_enabled = true
+region_rect = Rect2(0, 8, 512, 488)
+
+[node name="texto" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(141, -47)
+scale = Vector2(2.79687, 2.1875)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label" type="Label" parent="clickaveis"]
+offset_left = 90.0
+offset_top = -55.0
+offset_right = 243.0
+offset_bottom = -36.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 15
+text = "Trovadorismo"
+metadata/_edit_group_ = true
+
+[node name="texto2" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(-1.53125, -42)
+scale = Vector2(1.1709, 2.28125)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label2" type="Label" parent="clickaveis"]
+offset_left = -22.0
+offset_top = -54.0
+offset_right = 46.0
+offset_bottom = -32.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 8
+text = " Cantiga 
+de amor"
+metadata/_edit_group_ = true
+
+[node name="texto3" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(-1, 99)
+scale = Vector2(1.1084, 2.26562)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label3" type="Label" parent="clickaveis"]
+offset_left = -27.0
+offset_top = 86.0
+offset_right = 44.0
+offset_bottom = 108.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 8
+text = " Cantiga 
+de amigo"
+metadata/_edit_group_ = true
+
+[node name="texto4" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(276, -39)
+scale = Vector2(1.15625, 2.1875)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label4" type="Label" parent="clickaveis"]
+offset_left = 243.0
+offset_top = -50.0
+offset_right = 314.0
+offset_bottom = -28.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 8
+text = " Cantiga 
+de maldizer"
+metadata/_edit_group_ = true
+
+[node name="Kisspng-sprite-space-station-13-clown-pixel-art-clown-5Ad20a501Bf318_3621064715237146401145" type="Sprite2D" parent="clickaveis"]
+position = Vector2(294, 162)
+scale = Vector2(0.15979, 0.127075)
+texture = ExtResource("7_41tak")
+
+[node name="texto5" type="Sprite2D" parent="clickaveis"]
+z_index = -1
+position = Vector2(277, 100)
+scale = Vector2(1.15625, 2.1875)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 64, 64, 16)
+
+[node name="Label5" type="Label" parent="clickaveis"]
+offset_left = 247.0
+offset_top = 90.0
+offset_right = 318.0
+offset_bottom = 112.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_xf7i0")
+theme_override_font_sizes/font_size = 8
+text = " Cantiga 
+de escárnio"
+metadata/_edit_group_ = true
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 250.0
+offset_top = -27.0
+offset_right = 380.0
+offset_bottom = 2.00002
+grow_horizontal = 0
+scale = Vector2(2.39993, 0.833445)
+size_flags_horizontal = 4
+script = ExtResource("8_emadq")
+
+[node name="MarginContainer" type="MarginContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.005
+offset_left = -16.0
+offset_top = 36.0
+offset_right = 4.34999
+offset_bottom = 92.0
+grow_horizontal = 0
+scale = Vector2(0.973056, 0.819522)
+
+[node name="Button" type="Button" parent="Menu/MarginContainer"]
+layout_mode = 2
+focus_mode = 0
+flat = true
+alignment = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu"]
+z_index = 1
+position = Vector2(126.67, 56.3924)
+scale = Vector2(0.917214, 2.17271)
+texture = ExtResource("5_aud2l")
+region_enabled = true
+region_rect = Rect2(0, 240, 16, 16)
+
+[connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]
