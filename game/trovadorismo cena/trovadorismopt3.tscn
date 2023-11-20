@@ -101,8 +101,7 @@ offset_bottom = 273.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_vbnlb")
 theme_override_font_sizes/font_size = 24
-text = "Qual o tipo de cantiga recitada pelo 
-cavaleiro trovador?"
+text = "Em que era surgiu o trovadorismo?"
 metadata/_edit_group_ = true
 
 [node name="Base-01" type="Sprite2D" parent="UI"]
@@ -171,7 +170,7 @@ metadata/_edit_group_ = true
 
 [node name="Botões" type="Node2D" parent="."]
 
-[node name="Amor" type="Button" parent="Botões"]
+[node name="prehistoria" type="Button" parent="Botões"]
 offset_left = 68.0
 offset_top = 583.0
 offset_right = 275.0
@@ -180,7 +179,7 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/Amor"]
+[node name="Base-01" type="Sprite2D" parent="Botões/prehistoria"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("6_st2u5")
@@ -188,7 +187,7 @@ region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Botões/Amor"]
+[node name="Label" type="Label" parent="Botões/prehistoria"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -197,10 +196,10 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_vbnlb")
 theme_override_font_sizes/font_size = 15
-text = "Cantiga de Amor"
+text = "Pre-História"
 metadata/_edit_group_ = true
 
-[node name="Base-02" type="Sprite2D" parent="Botões/Amor"]
+[node name="Base-02" type="Sprite2D" parent="Botões/prehistoria"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -209,7 +208,7 @@ region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 metadata/_edit_group_ = true
 
-[node name="maldizer" type="Button" parent="Botões"]
+[node name="moderna" type="Button" parent="Botões"]
 offset_left = 326.0
 offset_top = 770.0
 offset_right = 533.0
@@ -218,14 +217,14 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/maldizer"]
+[node name="Base-01" type="Sprite2D" parent="Botões/moderna"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("6_st2u5")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/maldizer"]
+[node name="Label" type="Label" parent="Botões/moderna"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -234,9 +233,9 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_vbnlb")
 theme_override_font_sizes/font_size = 15
-text = "Cantiga de Maldizer"
+text = "Idade Moderna"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/maldizer"]
+[node name="Base-02" type="Sprite2D" parent="Botões/moderna"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -244,7 +243,7 @@ texture = ExtResource("6_st2u5")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
-[node name="Escarnio" type="Button" parent="Botões"]
+[node name="media" type="Button" parent="Botões"]
 offset_left = 65.0
 offset_top = 770.0
 offset_right = 267.0
@@ -253,14 +252,14 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/Escarnio"]
+[node name="Base-01" type="Sprite2D" parent="Botões/media"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("6_st2u5")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/Escarnio"]
+[node name="Label" type="Label" parent="Botões/media"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -269,9 +268,9 @@ offset_bottom = 49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_vbnlb")
 theme_override_font_sizes/font_size = 15
-text = "Cantiga de Escárnio"
+text = "Idade Média"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/Escarnio"]
+[node name="Base-02" type="Sprite2D" parent="Botões/media"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -279,7 +278,7 @@ texture = ExtResource("6_st2u5")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
-[node name="Amigo" type="Button" parent="Botões"]
+[node name="antiga" type="Button" parent="Botões"]
 offset_left = 323.562
 offset_top = 583.0
 offset_right = 530.563
@@ -287,14 +286,14 @@ offset_bottom = 646.0
 focus_mode = 0
 flat = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/Amigo"]
+[node name="Base-01" type="Sprite2D" parent="Botões/antiga"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("6_st2u5")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/Amigo"]
+[node name="Label" type="Label" parent="Botões/antiga"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -303,9 +302,9 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_vbnlb")
 theme_override_font_sizes/font_size = 15
-text = "Cantiga de Amigo"
+text = "Idade Antiga"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/Amigo"]
+[node name="Base-02" type="Sprite2D" parent="Botões/antiga"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -383,8 +382,8 @@ region_enabled = true
 region_rect = Rect2(0, 240, 16, 16)
 
 [connection signal="pressed" from="UI/próxima fase2" to="." method="_on_próxima_fase_2_pressed" flags=18]
-[connection signal="pressed" from="Botões/Amor" to="." method="_on_amor_pressed" flags=18]
-[connection signal="pressed" from="Botões/maldizer" to="." method="_on_maldizer_pressed" flags=18]
-[connection signal="pressed" from="Botões/Escarnio" to="." method="_on_escarnio_pressed" flags=18]
-[connection signal="pressed" from="Botões/Amigo" to="." method="_on_amigo_pressed" flags=18]
+[connection signal="pressed" from="Botões/prehistoria" to="." method="_on_amor_pressed" flags=18]
+[connection signal="pressed" from="Botões/moderna" to="." method="_on_maldizer_pressed" flags=18]
+[connection signal="pressed" from="Botões/media" to="." method="_on_escarnio_pressed" flags=18]
+[connection signal="pressed" from="Botões/antiga" to="." method="_on_amigo_pressed" flags=18]
 [connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]

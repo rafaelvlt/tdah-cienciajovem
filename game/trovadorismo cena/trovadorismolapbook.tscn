@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmxahnmpaf6ka"]
+[gd_scene load_steps=15 format=3 uid="uid://cmxahnmpaf6ka"]
 
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismolapbook.gd" id="1_546vv"]
 [ext_resource type="Texture2D" uid="uid://fottx8lhshj4" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (5).jpeg" id="1_ahgem"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="2_cqrxv"]
 [ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="2_djbbd"]
 [ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_aud2l"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="6_xf7i0"]
@@ -11,6 +10,10 @@
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="8_emadq"]
 [ext_resource type="Texture2D" uid="uid://b4lierip5ycx4" path="res://assets/trovadorismo assets/perguntas assets/pngwing.com.png" id="8_pm5px"]
 [ext_resource type="Texture2D" uid="uid://bsd0b16li8ovv" path="res://assets/trovadorismo assets/lapbookassets/portugalmapa.jpeg" id="9_k0fbm"]
+[ext_resource type="Texture2D" uid="uid://biphb81x0bggq" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (6).jpeg" id="11_2khyv"]
+[ext_resource type="Texture2D" uid="uid://bguehp00657su" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (3).jpeg" id="11_3t7pq"]
+[ext_resource type="Texture2D" uid="uid://ct1dwkl86f2op" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (7).jpeg" id="13_xwdlr"]
+[ext_resource type="Texture2D" uid="uid://dd2ygcmha1muj" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (8).jpeg" id="14_2d4qm"]
 
 [node name="trovadorismolapbook" type="Node2D"]
 script = ExtResource("1_546vv")
@@ -34,7 +37,7 @@ color = Color(0.960784, 0.933333, 0.729412, 1)
 [node name="Moldura Texto" type="Sprite2D" parent="caixadetexto"]
 position = Vector2(289.5, 831.5)
 scale = Vector2(8.79688, 4.42187)
-texture = ExtResource("2_cqrxv")
+texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 0, 64, 64)
 
@@ -280,6 +283,28 @@ scale = Vector2(0.917214, 2.17271)
 texture = ExtResource("5_aud2l")
 region_enabled = true
 region_rect = Rect2(0, 240, 16, 16)
+
+[node name="Explicacaoimg" type="Node2D" parent="."]
+
+[node name="spriteAmor" type="Sprite2D" parent="Explicacaoimg"]
+position = Vector2(294.5, 427.5)
+scale = Vector2(0.408203, 0.501)
+texture = ExtResource("11_2khyv")
+
+[node name="spriteMaldizer" type="Sprite2D" parent="Explicacaoimg"]
+position = Vector2(294.5, 429.625)
+scale = Vector2(0.408203, 0.754399)
+texture = ExtResource("11_3t7pq")
+
+[node name="spriteAmigo" type="Sprite2D" parent="Explicacaoimg"]
+position = Vector2(296, 429.25)
+scale = Vector2(0.421875, 0.460526)
+texture = ExtResource("13_xwdlr")
+
+[node name="spriteEscarnio" type="Sprite2D" parent="Explicacaoimg"]
+position = Vector2(297.5, 430)
+scale = Vector2(0.423828, 0.703125)
+texture = ExtResource("14_2d4qm")
 
 [connection signal="pressed" from="clickaveis/amor" to="." method="_on_amor_pressed"]
 [connection signal="pressed" from="clickaveis/amigo" to="." method="_on_amigo_pressed"]
