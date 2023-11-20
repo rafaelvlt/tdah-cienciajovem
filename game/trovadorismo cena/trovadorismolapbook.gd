@@ -2,10 +2,24 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
+var spriteapareceu = false
 func _ready():
+	spriteapareceu = false
 	get_node("caixadetexto/Moldura Texto").visible = false
 	get_node("caixadetexto/Explicacao").visible = false
+	$Explicacaoimg/spriteMaldizer.visible = false
+	$Explicacaoimg/spriteAmor.visible = false
+	$Explicacaoimg/spriteAmigo.visible = false
+	$Explicacaoimg/spriteEscarnio.visible = false
 func _on_amor_pressed():
+	if spriteapareceu == false:
+		spriteapareceu = true
+		$Explicacaoimg/spriteAmor.visible = true
+	else:
+		$Explicacaoimg/spriteAmor.visible = true
+		$Explicacaoimg/spriteEscarnio.visible = false
+		$Explicacaoimg/spriteAmigo.visible = false
+		$Explicacaoimg/spriteMaldizer.visible = false	
 	get_node("caixadetexto/Moldura Texto").visible = true
 	get_node("caixadetexto/Explicacao").visible = true
 	get_node("caixadetexto/Explicacao").text = "Cantiga de amor refere-se a um género
@@ -17,6 +31,14 @@ expressavam as emoções e desejos do
 poeta em relação a uma pessoa amada."
 
 func _on_amigo_pressed():
+	if spriteapareceu == false:
+		spriteapareceu = true
+		$Explicacaoimg/spriteAmigo.visible = true
+	else:
+		$Explicacaoimg/spriteAmor.visible = false
+		$Explicacaoimg/spriteEscarnio.visible = false
+		$Explicacaoimg/spriteAmigo.visible = true
+		$Explicacaoimg/spriteMaldizer.visible = false		
 	get_node("caixadetexto/Moldura Texto").visible = true
 	get_node("caixadetexto/Explicacao").visible = true
 	get_node("caixadetexto/Explicacao").text = "Cantiga de amigo é outro género de poesia
@@ -27,6 +49,14 @@ experiências, muitas vezes envolvendo um
 diálogo com sua amiga, mãe ou confidente."
 
 func _on_maldizer_pressed():
+	if spriteapareceu == false:
+		spriteapareceu = true
+		$Explicacaoimg/spriteMaldizer.visible = true
+	else:
+		$Explicacaoimg/spriteAmor.visible = false
+		$Explicacaoimg/spriteEscarnio.visible = false
+		$Explicacaoimg/spriteAmigo.visible = false
+		$Explicacaoimg/spriteMaldizer.visible = true
 	get_node("caixadetexto/Moldura Texto").visible = true
 	get_node("caixadetexto/Explicacao").visible = true
 	get_node("caixadetexto/Explicacao").text = "As cantigas de maldizer são canções cuja
@@ -36,6 +66,14 @@ baixo calão, como palavrões, pois o intuito
 é mesmo agredir alguém verbalmente."
 
 func _on_escarnio_pressed():
+	if spriteapareceu == false:
+		spriteapareceu = true
+		$Explicacaoimg/spriteEscarnio.visible = true
+	else:
+		$Explicacaoimg/spriteAmor.visible = false
+		$Explicacaoimg/spriteEscarnio.visible = true
+		$Explicacaoimg/spriteAmigo.visible = false
+		$Explicacaoimg/spriteMaldizer.visible = false	
 	get_node("caixadetexto/Moldura Texto").visible = true
 	get_node("caixadetexto/Explicacao").visible = true
 	get_node("caixadetexto/Explicacao").text = "Cantigas de escárnio caracterizavam-se pela 
@@ -48,6 +86,11 @@ satírico se comparado aos tons românticos e
 emocionais dos demais gêneros poéticos."
 
 func _on_contexto_pressed():
+	if spriteapareceu == true:
+		$Explicacaoimg/spriteAmor.visible = false
+		$Explicacaoimg/spriteEscarnio.visible = false
+		$Explicacaoimg/spriteAmigo.visible = false
+		$Explicacaoimg/spriteMaldizer.visible = false
 	get_node("caixadetexto/Moldura Texto").visible = true
 	get_node("caixadetexto/Explicacao").visible = true
 	get_node("caixadetexto/Explicacao").text = "O Trovadorismo refere-se a um movimento
