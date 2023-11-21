@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cag1oyvqbod87" path="res://trovadorismo cena/score.tscn" id="3_6nqbg"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="4_oaqos"]
 [ext_resource type="Script" path="res://trovadorismo cena/Placar.gd" id="5_xikhw"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="6_1sf0s"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="6_1sf0s"]
 [ext_resource type="Texture2D" uid="uid://dc0syu1m2whb6" path="res://assets/trovadorismo assets/Lively_NPCs_v3.0/sprite sheets/medieval/minstrel.png" id="7_vxxat"]
 [ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="8_4hp10"]
 [ext_resource type="Texture2D" uid="uid://ckkn0e0uwtbb3" path="res://assets/trovadorismo assets/perguntas assets/pixel-art-paw-prints-rug-graphics-transparent-png-1110298.png" id="9_bgfd0"]
@@ -384,8 +384,8 @@ region_rect = Rect2(0, 240, 16, 16)
 
 [connection signal="pressed" from="UI/próxima fase4" to="." method="_on_próxima_fase_2_pressed" flags=18]
 [connection signal="pressed" from="UI/próxima fase4" to="." method="_on_próxima_fase_4_pressed"]
-[connection signal="pressed" from="Botões/amigo" to="." method="_on_amor_pressed" flags=18]
 [connection signal="pressed" from="Botões/amigo" to="." method="_on_amigo_pressed"]
+[connection signal="pressed" from="Botões/amigo" to="." method="_on_amor_pressed" flags=18]
 [connection signal="pressed" from="Botões/amor" to="." method="_on_maldizer_pressed" flags=18]
 [connection signal="pressed" from="Botões/Escarnio" to="." method="_on_escarnio_pressed" flags=18]
 [connection signal="pressed" from="Botões/Maldizer" to="." method="_on_amigo_pressed" flags=18]

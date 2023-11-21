@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2sg8cb547gjq"]
+
+[ext_resource type="Script" path="res://scene_transition.gd" id="1_0hr4n"]
+[ext_resource type="Script" path="res://transicao.gd" id="2_42v4o"]
+
+[sub_resource type="Animation" id="Animation_c2c1f"]
+resource_name = "RESET"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5w2dc"]
+resource_name = "dissolve"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i0pdb"]
+_data = {
+"RESET": SubResource("Animation_c2c1f"),
+"dissolve": SubResource("Animation_5w2dc")
+}
+
+[node name="scene_transition" type="CanvasLayer"]
+script = ExtResource("1_0hr4n")
+
+[node name="dissolve_rect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="transicao" type="AnimationPlayer" parent="."]
+root_node = NodePath("../dissolve_rect")
+libraries = {
+"": SubResource("AnimationLibrary_i0pdb")
+}
+script = ExtResource("2_42v4o")
+
+[connection signal="animation_finished" from="transicao" to="." method="_on_transicao_animation_finished"]
