@@ -1,5 +1,7 @@
 extends Control
 
+func _ready():
+	Global.pontos = 0
 func _on_opções_pressed():
 	get_tree().change_scene_to_file("res://opcoes.tscn")
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo4a6a40sb0xi"
-path="res://.godot/imported/sprites2p (4).jpeg-cdb16cf79fb157cc15a7e89dae19c4e0.ctex"
+uid="uid://dqj7uelkqimih"
+path="res://.godot/imported/sprites2p (2).png-0736a552de7a0c8e4706bde8f7c0b563.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/trovadorismo assets/perguntas assets/sprites2p (4).jpeg"
-dest_files=["res://.godot/imported/sprites2p (4).jpeg-cdb16cf79fb157cc15a7e89dae19c4e0.ctex"]
+source_file="res://assets/trovadorismo assets/perguntas assets/sprites2p (2).png"
+dest_files=["res://.godot/imported/sprites2p (2).png-0736a552de7a0c8e4706bde8f7c0b563.ctex"]
 
 [params]
 
