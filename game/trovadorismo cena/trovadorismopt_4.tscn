@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://brkqlp0vw03fv"]
+[gd_scene load_steps=19 format=3 uid="uid://brkqlp0vw03fv"]
 
 [ext_resource type="Texture2D" uid="uid://dejwxyctsbbl2" path="res://assets/trovadorismo assets/ecbb8a7a8093fb9.png" id="1_a3byh"]
+[ext_resource type="Script" path="res://trovadorismo cena/trovadorismopt2.gd" id="1_nng42"]
 [ext_resource type="PackedScene" uid="uid://cag1oyvqbod87" path="res://trovadorismo cena/score.tscn" id="2_dyg3k"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="3_punf7"]
 [ext_resource type="Script" path="res://trovadorismo cena/Placar.gd" id="4_0vxgb"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_3n6rv"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_3n6rv"]
 [ext_resource type="Texture2D" uid="uid://dc0syu1m2whb6" path="res://assets/trovadorismo assets/Lively_NPCs_v3.0/sprite sheets/medieval/minstrel.png" id="6_oy41d"]
 [ext_resource type="Script" path="res://trovadorismo cena/UI.gd" id="7_inf5y"]
-[ext_resource type="Texture2D" uid="uid://00qv3ggcchh" path="res://assets/trovadorismo assets/perguntas assets/sprites2p (4).png" id="8_ytnbm"]
-[ext_resource type="Texture2D" uid="uid://dqj7uelkqimih" path="res://assets/trovadorismo assets/perguntas assets/sprites2p (2).png" id="9_43oo0"]
-[ext_resource type="Texture2D" uid="uid://bxxg2kuha6v2a" path="res://assets/trovadorismo assets/perguntas assets/sprites2p (5).png" id="10_p8krg"]
-[ext_resource type="Texture2D" uid="uid://b2405f1qk40q" path="res://assets/trovadorismo assets/perguntas assets/sprites2p (3).png" id="11_nvyv7"]
+[ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="8_maacf"]
+[ext_resource type="Texture2D" uid="uid://ckkn0e0uwtbb3" path="res://assets/trovadorismo assets/perguntas assets/pixel-art-paw-prints-rug-graphics-transparent-png-1110298.png" id="9_3nkt4"]
+[ext_resource type="Texture2D" uid="uid://bhh0vyvelhxij" path="res://assets/trovadorismo assets/perguntas assets/kisspng-sprite-space-station-13-clown-pixel-art-clown-5ad20a501bf318.3621064715237146401145.png" id="10_hfxma"]
+[ext_resource type="Texture2D" uid="uid://b4lierip5ycx4" path="res://assets/trovadorismo assets/perguntas assets/pngwing.com.png" id="11_u0hic"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mk7wu"]
 atlas = ExtResource("6_oy41d")
@@ -55,7 +56,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="trovadorismopt4" type="Node2D"]
+[node name="trovadorismopt2" type="Node2D"]
+script = ExtResource("1_nng42")
 
 [node name="BG" type="Node2D" parent="."]
 
@@ -65,7 +67,6 @@ position = Vector2(288, 512.5)
 scale = Vector2(0.697115, 0.874359)
 texture = ExtResource("1_a3byh")
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Score" parent="." instance=ExtResource("2_dyg3k")]
 script = null
@@ -100,6 +101,8 @@ offset_bottom = 273.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_punf7")
 theme_override_font_sizes/font_size = 24
+text = "Qual o tipo de cantiga recitada pelo 
+cavaleiro trovador?"
 metadata/_edit_group_ = true
 
 [node name="Base-01" type="Sprite2D" parent="UI"]
@@ -128,7 +131,7 @@ text = "Resposta correta:
 Cantiga de Amor!
 "
 
-[node name="próxima fase4" type="Button" parent="UI"]
+[node name="próxima fase2" type="Button" parent="UI"]
 z_index = 1
 offset_left = 176.0
 offset_top = 428.0
@@ -138,14 +141,14 @@ focus_mode = 0
 keep_pressed_outside = true
 flat = true
 
-[node name="Base-01" type="Sprite2D" parent="UI/próxima fase4"]
+[node name="Base-01" type="Sprite2D" parent="UI/próxima fase2"]
 position = Vector2(93, 74)
 scale = Vector2(7.5, 3.0875)
 texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(0, 176, 16, 16)
 
-[node name="Label" type="Label" parent="UI/próxima fase4"]
+[node name="Label" type="Label" parent="UI/próxima fase2"]
 layout_mode = 0
 offset_left = 25.0
 offset_top = 26.0
@@ -157,7 +160,7 @@ theme_override_font_sizes/font_size = 15
 text = "Próxima Fase!"
 metadata/_edit_group_ = true
 
-[node name="Base-02" type="Sprite2D" parent="UI/próxima fase4"]
+[node name="Base-02" type="Sprite2D" parent="UI/próxima fase2"]
 z_index = -1
 position = Vector2(93, 40)
 scale = Vector2(2.37891, -2.34375)
@@ -168,7 +171,7 @@ metadata/_edit_group_ = true
 
 [node name="Botões" type="Node2D" parent="."]
 
-[node name="prehistoria" type="Button" parent="Botões"]
+[node name="Amor" type="Button" parent="Botões"]
 offset_left = 68.0
 offset_top = 583.0
 offset_right = 275.0
@@ -177,7 +180,7 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/prehistoria"]
+[node name="Base-01" type="Sprite2D" parent="Botões/Amor"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("5_3n6rv")
@@ -185,7 +188,7 @@ region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 metadata/_edit_group_ = true
 
-[node name="Label" type="Label" parent="Botões/prehistoria"]
+[node name="Label" type="Label" parent="Botões/Amor"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -194,10 +197,10 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_punf7")
 theme_override_font_sizes/font_size = 15
-text = "Pre-História"
+text = "Cantiga de Amor"
 metadata/_edit_group_ = true
 
-[node name="Base-02" type="Sprite2D" parent="Botões/prehistoria"]
+[node name="Base-02" type="Sprite2D" parent="Botões/Amor"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -206,7 +209,7 @@ region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 metadata/_edit_group_ = true
 
-[node name="moderna" type="Button" parent="Botões"]
+[node name="maldizer" type="Button" parent="Botões"]
 offset_left = 326.0
 offset_top = 770.0
 offset_right = 533.0
@@ -215,14 +218,14 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/moderna"]
+[node name="Base-01" type="Sprite2D" parent="Botões/maldizer"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/moderna"]
+[node name="Label" type="Label" parent="Botões/maldizer"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -231,9 +234,9 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_punf7")
 theme_override_font_sizes/font_size = 15
-text = "Idade Moderna"
+text = "Cantiga de Maldizer"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/moderna"]
+[node name="Base-02" type="Sprite2D" parent="Botões/maldizer"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -241,7 +244,7 @@ texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
-[node name="media" type="Button" parent="Botões"]
+[node name="Escarnio" type="Button" parent="Botões"]
 offset_left = 65.0
 offset_top = 770.0
 offset_right = 267.0
@@ -250,14 +253,14 @@ focus_mode = 0
 flat = true
 metadata/_edit_group_ = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/media"]
+[node name="Base-01" type="Sprite2D" parent="Botões/Escarnio"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/media"]
+[node name="Label" type="Label" parent="Botões/Escarnio"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -266,9 +269,9 @@ offset_bottom = 49.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_punf7")
 theme_override_font_sizes/font_size = 15
-text = "Idade Média"
+text = "Cantiga de Escárnio"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/media"]
+[node name="Base-02" type="Sprite2D" parent="Botões/Escarnio"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -276,7 +279,7 @@ texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(0, 64, 64, 16)
 
-[node name="antiga" type="Button" parent="Botões"]
+[node name="Amigo" type="Button" parent="Botões"]
 offset_left = 323.562
 offset_top = 583.0
 offset_right = 530.563
@@ -284,14 +287,14 @@ offset_bottom = 646.0
 focus_mode = 0
 flat = true
 
-[node name="Base-01" type="Sprite2D" parent="Botões/antiga"]
+[node name="Base-01" type="Sprite2D" parent="Botões/Amigo"]
 position = Vector2(13.5625, 27.875)
 scale = Vector2(3.05469, -3.01562)
 texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(64, 64, 16, 16)
 
-[node name="Label" type="Label" parent="Botões/antiga"]
+[node name="Label" type="Label" parent="Botões/Amigo"]
 layout_mode = 0
 offset_left = 41.0
 offset_top = 17.0
@@ -300,9 +303,9 @@ offset_bottom = 52.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_punf7")
 theme_override_font_sizes/font_size = 15
-text = "Antiguidade"
+text = "Cantiga de Amigo"
 
-[node name="Base-02" type="Sprite2D" parent="Botões/antiga"]
+[node name="Base-02" type="Sprite2D" parent="Botões/Amigo"]
 z_index = -1
 position = Vector2(119, 29)
 scale = Vector2(2.63281, -2.8125)
@@ -319,6 +322,25 @@ sprite_frames = SubResource("SpriteFrames_wyjka")
 animation = &"new_animation"
 autoplay = "new_animation"
 frame_progress = 0.0826097
+
+[node name="HeartPixelArt32x32" type="Sprite2D" parent="."]
+position = Vector2(80, 612)
+texture = ExtResource("8_maacf")
+
+[node name="Pixel-art-paw-prints-rug-graphics-transparent-png-1110298" type="Sprite2D" parent="."]
+position = Vector2(336.563, 612)
+scale = Vector2(0.0519231, 0.0662544)
+texture = ExtResource("9_3nkt4")
+
+[node name="Kisspng-sprite-space-station-13-clown-pixel-art-clown-5Ad20a501Bf318_3621064715237146401145" type="Sprite2D" parent="."]
+position = Vector2(88, 803)
+scale = Vector2(0.104492, 0.0742188)
+texture = ExtResource("10_hfxma")
+
+[node name="Pngwing_com" type="Sprite2D" parent="."]
+position = Vector2(339, 797)
+scale = Vector2(0.0557367, 0.0511734)
+texture = ExtResource("11_u0hic")
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
@@ -360,36 +382,9 @@ texture = ExtResource("5_3n6rv")
 region_enabled = true
 region_rect = Rect2(0, 240, 16, 16)
 
-[node name="spriteMedieval" type="Sprite2D" parent="."]
-position = Vector2(77, 795)
-scale = Vector2(0.140625, 0.14375)
-texture = ExtResource("8_ytnbm")
-
-[node name="spriteModerno" type="Sprite2D" parent="."]
-position = Vector2(339, 797)
-scale = Vector2(0.1875, 0.201087)
-texture = ExtResource("9_43oo0")
-region_enabled = true
-region_rect = Rect2(80, 112, 176, 184)
-
-[node name="spriteAntigo" type="Sprite2D" parent="."]
-position = Vector2(337.438, 611.562)
-scale = Vector2(0.182778, 0.245)
-texture = ExtResource("10_p8krg")
-
-[node name="spriteDino" type="Sprite2D" parent="."]
-position = Vector2(79.625, 611.875)
-scale = Vector2(0.1015, 0.0994999)
-texture = ExtResource("11_nvyv7")
-
-[connection signal="pressed" from="UI/próxima fase4" to="." method="_on_próxima_fase_2_pressed" flags=18]
-[connection signal="pressed" from="UI/próxima fase4" to="." method="_on_próxima_fase_3_pressed" flags=18]
-[connection signal="pressed" from="Botões/prehistoria" to="." method="_on_amor_pressed" flags=18]
-[connection signal="pressed" from="Botões/prehistoria" to="." method="_on_prehistoria_pressed" flags=18]
-[connection signal="pressed" from="Botões/moderna" to="." method="_on_maldizer_pressed" flags=18]
-[connection signal="pressed" from="Botões/moderna" to="." method="_on_moderna_pressed" flags=18]
-[connection signal="pressed" from="Botões/media" to="." method="_on_escarnio_pressed" flags=18]
-[connection signal="pressed" from="Botões/media" to="." method="_on_media_pressed" flags=18]
-[connection signal="pressed" from="Botões/antiga" to="." method="_on_amigo_pressed" flags=18]
-[connection signal="pressed" from="Botões/antiga" to="." method="_on_antiga_pressed" flags=18]
+[connection signal="pressed" from="UI/próxima fase2" to="." method="_on_próxima_fase_2_pressed" flags=18]
+[connection signal="pressed" from="Botões/Amor" to="." method="_on_amor_pressed" flags=18]
+[connection signal="pressed" from="Botões/maldizer" to="." method="_on_maldizer_pressed" flags=18]
+[connection signal="pressed" from="Botões/Escarnio" to="." method="_on_escarnio_pressed" flags=18]
+[connection signal="pressed" from="Botões/Amigo" to="." method="_on_amigo_pressed" flags=18]
 [connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]

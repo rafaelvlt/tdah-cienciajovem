@@ -19,6 +19,16 @@ Cantiga de Amor!
 + 100 pontos!"
 	else:
 		pass
+func _on_amigo_pressed():
+	if flag1 == false:
+		flag1 = true
+		get_node("UI/Resposta").visible = true
+		get_node("UI/Base-02").visible = true
+		get_node("UI/Resposta").text = "Resposta Incorreta.
+		Volte ao Lapbook"
+		get_node("UI/próxima fase2").visible = true
+	else:
+		pass
 func _on_maldizer_pressed():
 	if flag1 == false:
 		flag1 = true
@@ -30,16 +40,6 @@ func _on_maldizer_pressed():
 	else:
 		pass
 func _on_escarnio_pressed():
-	if flag1 == false:
-		flag1 = true
-		get_node("UI/Resposta").visible = true
-		get_node("UI/Base-02").visible = true
-		get_node("UI/Resposta").text = "Resposta Incorreta.
-		Volte ao Lapbook"
-		get_node("UI/próxima fase2").visible = true
-	else:
-		pass
-func _on_amigo_pressed():
 	if flag1 == false:
 		flag1 = true
 		get_node("UI/Resposta").visible = true

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://be7xp4kb6mt62"]
+
+[ext_resource type="Texture2D" uid="uid://bims5om8tx5bv" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (4).jpeg" id="1_uvky1"]
+
+[node name="trovadorismopt5" type="Node2D"]
+
+[node name="BG" type="Node2D" parent="."]
+
+[node name="Pedrosprite(4)" type="Sprite2D" parent="."]
+position = Vector2(287.5, 512.5)
+scale = Vector2(1.11914, 2.01775)
+texture = ExtResource("1_uvky1")

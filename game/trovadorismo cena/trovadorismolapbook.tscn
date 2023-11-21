@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://trovadorismo cena/trovadorismolapbook.gd" id="1_546vv"]
 [ext_resource type="Texture2D" uid="uid://fottx8lhshj4" path="res://assets/trovadorismo assets/lapbookassets/pedrosprite (5).jpeg" id="1_ahgem"]
 [ext_resource type="Texture2D" uid="uid://cyl7j6g4wx7so" path="res://assets/trovadorismo assets/perguntas assets/heart pixel art 32x32.png" id="2_djbbd"]
-[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/trovadorismo assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_aud2l"]
+[ext_resource type="Texture2D" uid="uid://bq3qpq50h3gux" path="res://assets/Legacy-Fantasy - High Forest 2.3/HUD/Base-01.png" id="5_aud2l"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="6_xf7i0"]
 [ext_resource type="Texture2D" uid="uid://bhh0vyvelhxij" path="res://assets/trovadorismo assets/perguntas assets/kisspng-sprite-space-station-13-clown-pixel-art-clown-5ad20a501bf318.3621064715237146401145.png" id="7_41tak"]
 [ext_resource type="Texture2D" uid="uid://ckkn0e0uwtbb3" path="res://assets/trovadorismo assets/perguntas assets/pixel-art-paw-prints-rug-graphics-transparent-png-1110298.png" id="7_120ss"]
@@ -302,8 +302,8 @@ scale = Vector2(0.421875, 0.460526)
 texture = ExtResource("13_xwdlr")
 
 [node name="spriteEscarnio" type="Sprite2D" parent="Explicacaoimg"]
-position = Vector2(297.5, 430)
-scale = Vector2(0.423828, 0.703125)
+position = Vector2(295.5, 428.5)
+scale = Vector2(0.416016, 0.695313)
 texture = ExtResource("14_2d4qm")
 
 [connection signal="pressed" from="clickaveis/amor" to="." method="_on_amor_pressed"]

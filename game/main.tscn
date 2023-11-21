@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_67bn1"]
 [ext_resource type="FontFile" uid="uid://cwbpxp1bhq1tc" path="res://assets/fonts/04B_03__.TTF" id="2_7cyau"]
-[ext_resource type="Texture2D" uid="uid://buwpfoh52o2ml" path="res://assets/backgroundteste.png" id="3_1jmsa"]
+[ext_resource type="Texture2D" uid="uid://cnxh0hp8nsylo" path="res://assets/background.png" id="3_03hk8"]
 
 [sub_resource type="Theme" id="Theme_kdje8"]
 
@@ -62,9 +62,9 @@ z_index = -1
 position = Vector2(-17, 10)
 
 [node name="Saladeaula" type="Sprite2D" parent="Menu/ParallaxBackground/ParallaxLayer"]
-position = Vector2(304.293, 504)
-scale = Vector2(0.82202, 0.823151)
-texture = ExtResource("3_1jmsa")
+position = Vector2(305, 503)
+scale = Vector2(1.13672, 1.29323)
+texture = ExtResource("3_03hk8")
 
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Jogar" to="Menu" method="_on_jogar_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/Opções" to="Menu" method="_on_opções_pressed"]
