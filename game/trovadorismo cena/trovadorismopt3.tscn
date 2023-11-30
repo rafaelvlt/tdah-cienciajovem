@@ -386,14 +386,14 @@ scale = Vector2(0.1015, 0.0994999)
 texture = ExtResource("7_b2541")
 
 [connection signal="pressed" from="UI/próxima fase3" to="." method="_on_próxima_fase_2_pressed" flags=18]
-[connection signal="pressed" from="UI/próxima fase3" to="." method="_on_próxima_fase_4_pressed"]
 [connection signal="pressed" from="UI/próxima fase3" to="." method="_on_próxima_fase_3_pressed"]
+[connection signal="pressed" from="UI/próxima fase3" to="." method="_on_próxima_fase_4_pressed"]
 [connection signal="pressed" from="Botões/prehistoria" to="." method="_on_prehistoria_pressed"]
 [connection signal="pressed" from="Botões/prehistoria" to="." method="_on_amor_pressed" flags=18]
-[connection signal="pressed" from="Botões/moderna" to="." method="_on_maldizer_pressed" flags=18]
 [connection signal="pressed" from="Botões/moderna" to="." method="_on_moderna_pressed"]
+[connection signal="pressed" from="Botões/moderna" to="." method="_on_maldizer_pressed" flags=18]
 [connection signal="pressed" from="Botões/media" to="." method="_on_media_pressed"]
 [connection signal="pressed" from="Botões/media" to="." method="_on_escarnio_pressed" flags=18]
-[connection signal="pressed" from="Botões/antiga" to="." method="_on_amigo_pressed" flags=18]
 [connection signal="pressed" from="Botões/antiga" to="." method="_on_antiga_pressed"]
+[connection signal="pressed" from="Botões/antiga" to="." method="_on_amigo_pressed" flags=18]
 [connection signal="pressed" from="Menu/MarginContainer/Button" to="Menu" method="_on_button_pressed" flags=18]
